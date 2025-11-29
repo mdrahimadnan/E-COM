@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyShop</title>
+  <link rel="stylesheet" href="style.css"> <!-- External CSS -->
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div id="user-display" 
+    style="position: absolute; right: 10px; top: 10px; font-weight: lighter;">
+  <h2>l</h2>
+  
+  
+  </div>
+    
+    <div class="logo">MyShop</div>
+    <nav class="nav-links">
+      <a href="home.html">Home</a> 
+      <a href="watches.html">Watches</a>
+      <a href="laptops.html">Laptops</a>
+      <a href="products.html">Product</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+
+  <!-- Welcome Section -->
+  <section class="welcome">
+    <h1>Welcome to MyShop</h1>
+    <p>Find the best deals on the top products.</p>
+    <button class="shop-button">Shop Me</button>
+  </section>
+
+  <!-- Highlight Section -->
+  <section class="highlight">
+    <h2>Why choose us?</h2>
+    <ul class="centered-list">
+      <li>👉 High quality products</li>
+      <li>👉 Best price</li>
+      <li>👉 Low price with no discount</li>
+      <li>👉 Fast delivery</li>
+      <li>👉 Easy return</li>
+    </ul>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <p>© 2025 MyShop. All Rights Reserved.</p>
+  </footer>
+
+ <!-- show logged-in user -->
+  <script>
+    const user = localStorage.getItem("loginUser");
+    if (user) {
+      document.getElementById("user-display").innerText = "Welcome, " + user;
+    }
+  </script>
+
+</body>
+</html>

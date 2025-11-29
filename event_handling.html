@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clicks</title>
+    <script>
+        function fun(){}
+            document.getElementById("p1").onmouseover=fun1;
+            document.getElementById("p1").onmouseout=fun2;
+            function fun1(Event){
+                this.style.color="red";
+            }
+            function fun2(Event){
+                this.style.color="green";
+            }
+    </script>
+</head>
+<body>
+    <p id="p1">hello</p>
+    <input type="submit" onclick="return fun();"">
+    
+</body>
+</html>

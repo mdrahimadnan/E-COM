@@ -1,0 +1,59 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyWatchShop</title>
+  <link rel="stylesheet" href="style.css" />
+<script>
+    function goToHome(event) {
+      event.preventDefault();  
+
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+
+      if (username === "admin" && password === "admin") {
+        alert("Login Successful! Welcome Admin.");
+       
+        localStorage.setItem("loginUser", username);
+       
+        window.location.href = "index.html";
+      } else {
+        alert("Invalid Username or Password. Try again.");
+      }
+    }
+  </script>
+
+
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">MyWatchShop</div>
+    <nav class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="watches.html">Watches</a>
+      <a href="laptops.html">Laptops</a>
+      <a href="product.html">Products</a>
+      <a href="cart.html">Cart</a>
+    </nav>
+  </header>
+  
+  <section class="login-container">
+    <center>
+      <h1>Login Page</h1>
+      <form onsubmit="goToHome(event)">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter Username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter Password"><br><br>
+        <input type="submit" value="Login">
+      </form>
+    </center>
+  </section>
+</body>
+</html>
+
+
